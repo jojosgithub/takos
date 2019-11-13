@@ -1,3 +1,5 @@
+#aggiungo descrizione
+
 sbAC <-  function (time.start=0,T0=0,T.end=1200,qqq=10,A=10^(6.3),Ea=80000,m=1,n=2,npoints=10000,prec=10^(-4.30095790876)) 
 {
 library(deSolve)
