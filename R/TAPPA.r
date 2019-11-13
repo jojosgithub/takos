@@ -1,5 +1,3 @@
-# test
-
 #' Title  Tangent area proportional method TAPPA
 #' @description calculates the background of a thermogram according to Tangent-area-proportional method
 #' @param T temperature
