@@ -15,7 +15,7 @@
 #' @return startgin temperature "T","fi",degree of crystallization "alfa",differential alfa in T "dadT",time in seconds "time.s",differential equation solution "sol"
 #' @export
 #' @rawNamespace import(deSolve,except=rk4)
-#' @references J. Šesták. Thermophysical Properties of Solids, Their Measurements and Theoretical Analysis. Elsevier: Amsterdam, 1984.
+#' @references J. �esták. Thermophysical Properties of Solids, Their Measurements and Theoretical Analysis. Elsevier: Amsterdam, 1984.
 #' @examples  \donttest{
 #'
 #' res <- sbAC(npoints=5000,prec=10^(-4.30095790876))
