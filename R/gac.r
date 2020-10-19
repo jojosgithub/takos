@@ -14,7 +14,7 @@
 #' @param rmod Kinetic model (default = Isoda)
 #' @param ... Parameters to pass to ode function for choosing solver method
 #'
-#' @return startgin temperature "T","fi",degree of crystallization "alfa",differential alfa in T "dadT",time in seconds "time.s",differential equation solution "sol"
+#' @return starting temperature "T","fi",degree of crystallization "alfa",differential alfa in T "dadT",time in seconds "time.s",differential equation solution "sol"
 #' @export
 #' @rawNamespace import(deSolve,except=rk4)
 #' @examples  \donttest{
