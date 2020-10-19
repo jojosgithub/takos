@@ -1,20 +1,25 @@
 #' Title sbAC
-#' @description performs simulation according to several kinetic models
-#' @param
-#'        starting time for the simulations "time.start",
-#'	      temperature start "T0",
-#'		  end temperature "T.end",
-#'		  heating rate "qqq",
-#'		  Ea, A, m and n parameters in the equation
-#'        number of points "npoints",
-#'		  starting value for the equation "prec"
+#' @description Performs simulation according to several kinetic models
+#' @param time.start Starting time for the simulations
+#' @param T0 Temperature start
+#' @param T.end End temperature
+#' @param qqq Heating rate
+#' @param A Parameter in the equation
+#' @param Ea Parameter in the equation
+#' @param m Parameter in the equation
+#' @param n Parameter in the equation
+#' @param K Parameter in the equation
+#' @param npoints Number of points
+#' @param prec Starting value for the equation "prec"
+#' @param rmod Kinetic model (default = Isoda)
+#' @param ... Parameters to pass to ode function for choosing solver method
 #'
 #' @return startgin temperature "T","fi",degree of crystallization "alfa",differential alfa in T "dadT",time in seconds "time.s",differential equation solution "sol"
 #' @export
-#' @import deSolve
+#' @rawNamespace import(deSolve,except=rk4)
 #' @examples  \donttest{
 #'
-#' res <- gAC(npoints=100rm(list=ls())00,prec=10^(-4.30095790876))
+#' gAC(npoints=5000,prec=10^(-4.30095790876))
 #'
 #' }
 
@@ -33,7 +38,7 @@ gAC<-  function (time.start=0,
   Ts <- 273.15+ T0  #transformation in K
 
   time.e=(T.end - T0)/(qqq/60) #estimated end time for the analysis depending on the rate
-  time.s=seq(time.start,time.e, length.out=npoints) #vector with all the times for solving the equations time in seconds    KARLINE: THIS HAS NO IMPACT ON THE SOLUTION...
+  time.s=seq(time.start,time.e, length.out=npoints) #vector with all the times for solving the equations time in seconds
   tm = time.s
   Temp = Ts+(time.s*(qqq/60)) #temperatures calculated at each time
 
