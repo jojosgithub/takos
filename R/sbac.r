@@ -1,21 +1,24 @@
 #' Title sbAC
-#' @description performs Šesták-Berggren (AC) simulations
-#' @param
-#'        starting time for the simulations "time.start",
-#'	      temperature start "T0",
-#'		  end temperature "T.end",
-#'		  heating rate "qqq",
-#'		  Ea, A, m and n parameters in the equation
-#'        number of points "npoints",
-#'		  starting value for the equation "prec"
+#' @description Performs Šesták-Berggren (AC) simulations
+#' @param time.start Starting time for the simulations
+#' @param T0 Temperature start
+#' @param T.end End temperature
+#' @param qqq Heating rate
+#' @param A Parameters in the equation
+#' @param Ea Parameters in the equation
+#' @param m Parameter in the equation
+#' @param n Parameter in the equation
+#' @param npoints Number of points
+#' @param prec Starting value for the equation "prec"
+#' @param ... Parameters to pass to ode function for choosing solver method
 #'
 #' @return startgin temperature "T","fi",degree of crystallization "alfa",differential alfa in T "dadT",time in seconds "time.s",differential equation solution "sol"
 #' @export
-#' @import deSolve
+#' @rawNamespace import(deSolve,except=rk4)
 #' @references J. Šesták. Thermophysical Properties of Solids, Their Measurements and Theoretical Analysis. Elsevier: Amsterdam, 1984.
 #' @examples  \donttest{
 #'
-#' res <- sbAC(npoints=100rm(list=ls())00,prec=10^(-4.30095790876))
+#' res <- sbAC(npoints=5000,prec=10^(-4.30095790876))
 #'
 #' }
 
