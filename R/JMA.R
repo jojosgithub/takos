@@ -29,7 +29,7 @@
 #' c("time.seconds","temperature.s","heat.flow","rates") ) )
 #' #create a plot using the function thermo
 #' amaxH <- max(sapply(a, function(x) max(x$heat.flow))) # calculate the max
-#' plot(c(0,300),c(0,amaxH),mytitle="dataset A 120/60 0.66/0.33",
+#' plot(c(0,300),c(0,amaxH),main="dataset A 120/60 0.66/0.33",
 #' ylab="ExothermicHeatFlow", xlab="Temperature")
 #' lapply(a, function(x) lines(x$temperature.s,x$heat.flow,lwd=3))
 
