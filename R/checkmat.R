@@ -19,7 +19,7 @@
 #'cmat<- checkmat(dat,selected=c(1,0,2,0,0,0,3,0))
 #'
 
-checkmat <- function(dat, header=TRUE, selected=c(0, 1, 2, 0, 0, 0, 4,0)) {
+checkmat <- function(dat, header=TRUE, selected=c(1,0,2,0,0,0,3,0)) {
 
   its.K <- NULL
   #require(tools)
