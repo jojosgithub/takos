@@ -1,7 +1,8 @@
 
 #' Title testMat
 #'
-#' @param a list of data tables of the checked thermograms using checkmat , obtained at different rates to change lines
+#' this function is used when the user need to specify the integration limits for a selected peak
+#' @param a list of data tables of the checked thermograms using checkmat , obtained at different rates 
 #' @param l.lim left lim of running integral
 #' @param r.lim  rigth lim of running integral
 #' @param toselect vector
