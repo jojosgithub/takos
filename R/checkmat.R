@@ -9,7 +9,8 @@
 #' @export
 #' @details i.e. selected=c(1,0,2,0,0,0,3) means that your first column is time.seconds, the second column is the temperature of the sample
 #' 	and the this column is the heat flow. 0 represents the other column of your files that are not present in your dataset
-#' @examples npoints=1000
+#' @examples 
+#'npoints=1000
 #'x=seq(1,npoints)
 #'y=(dnorm(x, mean=npoints/2, sd=npoints/10))
 #'x=seq(1,1000)
