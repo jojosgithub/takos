@@ -14,7 +14,7 @@
 #' a[[x]]$dadT, rates[[x]]))
 #' lapply(seq(1,length(a)), function(x) setnames(a[[x]],
 #' c("time.seconds","temperature.s","heat.flow","rates") ) )
-#' ar<-testMat(a)
+#' ar<-testMat(a,toselect=c(0,1,2,0,0,0,3,4))
 #' avr<-avrami(ar)
 #' }
 
