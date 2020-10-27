@@ -6,7 +6,18 @@
 #' @return models "mod", datable "xy" for plot
 #' @references 1. Avrami M. Kinetics of Phase Change. I General Theory. J Chem Phys. 1939;7(12):1103-1112. doi:10.1063/1.1750380.
 #' @export
-
+#' @examples  \donttest{
+#' require(data.table)
+#' require(MASS)
+#' rates=c(0.5,1,2,5,10,20,50)
+#' a<-lapply(rates, function(x) JMA(A=exp(35),Ea=120000,T0=0,T.end=300,q=x,npoints=5000,n=2))
+#' a<-lapply(seq(1,length(a)), function(x) data.table(a[[x]]$time.s,a[[x]]$T.C,
+#' a[[x]]$dadT, rates[[x]]))
+#' lapply(seq(1,length(a)), function(x) setnames(a[[x]],
+#' c("time.seconds","temperature.s","heat.flow","rates") ) )
+#' ar<-testMat(a,toselect=c(0,1,2,0,0,0,3,4))
+#' avr<-lavrami(ar)
+#' }
 lavrami <- function(mat, up=0.9999, low=0.0001) {
   time.minutes.check <- time.minutes<-time.minutes.zero <- id_cycle <- rate <- NULL
 
