@@ -7,7 +7,7 @@
 #' @param colname name of the selected column
 #' @param myby  varialbe selected for subsetting the matrix
 #'
-#' @description zeroes time (in seconds) according to peak given by the user
+#' @description search in the checked matrix by checkmat, the starting of the selected peak for each heating/cooling cycles and zeroes the time (in seconds) 
 #'
 matzero <- function(mat, spks=1, x=mat$time.seconds.zero, colname="v.check",myby="id_cycle") {
   pks <- NULL
