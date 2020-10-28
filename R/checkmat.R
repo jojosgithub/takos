@@ -1,10 +1,18 @@
 
 #' Title checkmat
 #'
-#' @param dat MUST be a data.frame where each column represent a parameter of the thermogram you need to check
+#' @param dat MUST be a data.frame (it does not work is it's a data.table and also a data.frame) where each column represent a parameter of the thermogram you need to check
 #' @param header present or not in your data.frame
 #' @param selected a vector that include the coded position of the parameters present in the dataset. 0 equal not present, while if you insert a number its value will refer to
-#' the index of the column of the input matrix where the parameter is stored. the coding of the vector selected is the following  1. "time.minutes" 2. "time.seconds" 3."temperature.s" 4."temperature.r" 5."temperature.s.K" 6."temperature.r.K"7."heat.flow"8. "id"
+#' the index of the column of the input matrix where the parameter is stored. the coding of the vector selected is the following  
+#' 1. "time.minutes" 
+#' 2. "time.seconds"
+#' 3. "temperature.s"
+#' 4. "temperature.r" 
+#' 5. "temperature.s.K" 
+#' 6. "temperature.r.K"
+#' 7  "heat.flow"
+#' 8. "id"
 #' @return Checked data frame
 #' @export
 #' @details i.e. selected=c(1,0,2,0,0,0,3) means that your first column is time.seconds, the second column is the temperature of the sample
