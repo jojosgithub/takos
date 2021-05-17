@@ -1,5 +1,5 @@
 #' Title sbAC
-#' @description Performs Šesták-Berggren (AC) simulations
+#' @description Performs Å estÃ¡k-Berggren (AC) simulations
 #' @param time.start Starting time for the simulations
 #' @param T0 Temperature start
 #' @param T.end End temperature
@@ -15,7 +15,7 @@
 #' @return startgin temperature "T","fi",degree of crystallization "alfa",differential alfa in T "dadT",time in seconds "time.s",differential equation solution "sol"
 #' @export
 #' @rawNamespace import(deSolve,except=rk4)
-#' @references J. �esták. Thermophysical Properties of Solids, Their Measurements and Theoretical Analysis. Elsevier: Amsterdam, 1984.
+#' @references J. ÅestÃ¡k. Thermophysical Properties of Solids, Their Measurements and Theoretical Analysis. Elsevier: Amsterdam, 1984.
 #' @examples  \donttest{
 #'
 #' res <- sbAC(npoints=5000,prec=10^(-4.30095790876))
@@ -69,7 +69,7 @@ T.C <- Temp-273.15
 T.K <- Temp
 timef <- sol[,1]
 alfa <- sol[,2]*100
-dadT=c(0,diff(sol[,2])/diff(T.C))
+dadT=c(0,diff(sol[,2])/diff(T.C)[1])
 my.list <- list("T.C" = T.C, "T.K"=T.K,"sol"=sol,"fi"=sol[,4],"alfa"=alfa, "dadT"=dadT, "time.s"=timef)
 return(my.list)
 }
