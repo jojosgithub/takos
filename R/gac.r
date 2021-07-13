@@ -92,11 +92,14 @@ plot(sol) #a visual check of the results obtained
 ###
 T.C <- Temp-273.15
 T.K <- Temp
-timef <- sol[,1]
-alfa <- sol[,2]*100
-dadT=c(0,diff(sol[,2])/diff(T.C))
-my.list <- list("T.C" = T.C, "T.K"=T.K,"sol"=sol,"fi"=sol[,4],"alfa"=alfa, "dadT"=dadT, "time.s"=timef)
-return(my.list)
+
+mylag <- length(Temp)-length(sol[,3])
+pad <- rep(NaN,mylag)
+timef <- c(sol[,1],pad)
+alfa  <- c(sol[,2]*100,pad)
+yy1   <- c(sol[,2],pad)
+dadT=c(diff(yy1)/diff(T.C))
+my.list <- list("T.C" = T.C, "T.K"=T.K,"sol"=sol,"fi"=sol[,4],"alfa"=alfa, "dadT"=dadT, "time.s"=timef) 
 }
 
 
